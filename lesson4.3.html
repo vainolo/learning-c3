@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/d3@5.12.0/dist/d3.min.js"></script>
+        <link href="https://unpkg.com/c3@0.7.11/c3.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/c3@0.7.11/c3.min.js"></script>
+    </head>
+    <body>
+        <div id="chart"></div>
+        <script>
+var chart = c3.generate({
+    bindto: '#chart',
+    data: {
+        x: 'x',
+        columns: [
+            ['x', 'London, UK', 'Paris, France', 'Milan, Italy', 'Frankfurt, Germany', 'Chicago, USA'],
+            ['Widgets Produced', 30, 200, 100, 400, 150],
+            ['Widgets Sold', 50, 250, 80, 350, 200],
+        ],
+        type: 'bar'
+    },
+    axis: {
+        rotated: true,
+        x: {
+            type: 'category'
+        }
+    }
+});
+        </script>
+    </body>
+</html>
